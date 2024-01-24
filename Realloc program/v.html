@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Proposal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+
+        #proposal-container {
+            text-align: center;
+        }
+
+        #proposal-text {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        #proposal-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #proposal-button:hover {
+            background-color: #d81b60;
+        }
+
+        #ring {
+            display: none;
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        @keyframes ringAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="proposal-container">
+    <p id="proposal-text">Life with you is a beautiful journey. Will you make it forever?</p>
+    <button id="proposal-button" onclick="showRing()">Propose</button>
+    <img id="ring" src="ring.png" alt="Engagement Ring">
+</div>
+
+<script>
+    function showRing() {
+        // Display the ring image and play a cute animation
+        document.getElementById('ring').style.display = 'block';
+        document.getElementById('ring').style.animation = 'ringAnimation 1s ease-in-out';
+        // You can customize this part based on your preferences
+        setTimeout(function() {
+            alert("Will you marry me?");
+        }, 1000); // After 1 second, display a cute message (you can customize the timing)
+    }
+</script>
+
+</body>
+</html>
